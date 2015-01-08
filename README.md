@@ -1,5 +1,6 @@
 # beIn
 未来の在室情報を予測するシステム
+http://inct.github.io/beIn/
 
 ## 使い方
 そのうち
