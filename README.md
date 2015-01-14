@@ -5,12 +5,18 @@ http://inct.github.io/beIn/
 
 ### 動作環境
 + Android 5.0
-+ ios 8
 + chrome(最新版)
 
 ### 開発環境
 ### 言語
-
+####Android
+Java
+####サーバー
+PHP
+####フロント
+HTML
+CSS
+JavaScript
 ### ライブラリ
 
 ### ツール
