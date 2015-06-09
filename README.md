@@ -1,4 +1,4 @@
-# BeIn
+# T-chan!
 ##概要
 未来の在室情報を予測するシステム  
 http://inct.github.io/beIn/
