@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>sample</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" /> 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/css1.css">
+        <!--<link rel="stylesheet" href="css/jquery.minimalect.css">-->
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.minimalect.js"></script>
+        <script type="text/javascript" src="js/test1_new.js"></script>
+        <script type="text/javascript" src="js/get-teacher.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+        <!--
+        <script type="text/javascript">
+        $(function() {
+		$("#dec").minimalect({ theme: "bubble", placeholder: "教員"});
+		$("#dec_time").minimalect({ theme: "bubble_o", placeholder: "時間"});
+		$("#dec_week").minimalect({ theme: "bubble_g", placeholder: "曜日"});
+		});
+        </script>
+    -->
+    </head>
+    <body>
+        <div id="home" data-role="page">
+            <div data-role="header">
+                <h1>T-chan!</h1>
+            </div>
+            
+            
+            <div data-role="content">
+            
+            <table id="table" border="0" width="100%" style="table-layout:fixed;">
+            
+            <!--
+            <tr>
+            <td align="center" colspan="4">
+            
+            <img src="img/nowtime.png"  width="120px">
+			
+			</td>
+			</tr>
+			-->
+			
+			<tr>
+			<td align="center"><img src="img/s1.png" width="60px" ></td>
+			
+			<td align="center"><img src="img/s2.png" width="60px"></td>
+			</tr>
+			
+			
+			<tr>
+			<!--
+			<tr>1
+			<td height="30"><img src="teacher.png" width="30px"></td>
+			<td>教員一覧</td>
+			-->
+			<td>
+			<select id = "dec" name = "teacher" >
+			<option value="default">教員</option>
+			<!--
+			<option value="takeshita">竹下　哲義</option>
+			<option value="kanedera">金寺　　登</option>
+			<option value="yamaday">山田　洋士</option>
+			<option value="yamadak">山田　健二</option>
+			<option value="nagaoka">長岡　健一</option>
+			<option value="komura">小村良太郎</option>
+			<option value="koshino">越野　　亮</option>
+			<option value="matsumoto">松本　剛史</option>
+			<option value="kawayoke">川除　佳和</option>
+			<option value="shimada">嶋田　直樹</option>
+			-->
+			
+			</select>
+			</td>
+			
+
+			<!--
+			<tr>
+			<td><img src="time.png" width="30px"></td>
+			<td>時間選択</td>
+			-->
+			<td>
+			<select id = "dec_week"　class="fmselect" name="week" >
+			<option value="default"></option>
+			<option value="Monday">月曜日</option>
+			<option value="Tuesday">火曜日</option>
+			<option value="Wednesday">水曜日</option>
+			<option value="Thursday">木曜日</option>
+			<option value="Friday">金曜日</option>
+			</select>
+			</td>
+
+			
+			</tr>
+			
+			<tr>
+			<td align="center" colspan="2"><img src="img/logo.png" width="160px" style="position: relative; top:10px;"></td>
+			</tr>
+			
+			<tr>
+			<td align="center" colspan="2"><img src="img/ct.png" width="80px" style="position:relative; top: 10px; right:30px;"></td>
+			<div align="center" style="position: relative; top:245px; left:43px" align="center">
+			<p id ="RealtimeClockArea2"></p></div>
+			</tr>
+			
+			<tr>
+			<td align="center"><img src="img/s3.png" width="60px"></td>
+			
+			<td align="center"><img src="img/s4.png" width="60px"></td>
+			</tr>
+			
+			<tr>
+			<td>
+			<!-- data-role="none" -->
+
+			<select id = "dec_time" name = "time">
+			<option value="default"></option>
+			<option value="08:00:00">08:00</option>
+			<option value="08:30:00">08:30</option>
+			<option value="09:00:00">09:00</option>
+			<option value="09:30:00">09:30</option>
+			<option value="10:00:00">10:00</option>
+			<option value="10:30:00">10:30</option>
+			<option value="11:00:00">11:00</option>
+			<option value="11:30:00">11:30</option>
+			<option value="12:00:00">12:00</option>
+			<option value="12:30:00">12:30</option>
+			<option value="13:00:00">13:00</option>
+			<option value="13:30:00">13:30</option>
+			<option value="14:00:00">14:00</option>
+			<option value="14:30:00">14:30</option>
+			<option value="15:00:00">15:00</option>
+			<option value="15:30:00">15:30</option>
+			<option value="16:00:00">16:00</option>
+			<option value="16:30:00">16:30</option>
+			<option value="17:00:00">17:00</option>
+			<option value="17:30:00">17:30</option>
+			<option value="18:00:00">18:00</option>
+			<option value="18:30:00">18:30</option>
+			<option value="19:00:00">19:00</option>
+			<option value="19:30:00">19:30</option>
+			<option value="20:00:00">20:00</option>
+			</select>
+			</td>
+			
+			
+			<td align="center">
+			<!-- <button type="button" name="search" value="search" >検索</button> -->
+			<div class="toggle">
+				<input type="checkbox" name="" id="toggle">
+				<label for="toggle" class="toggleLabel">未来</label>
+			</div>
+			<!--<input type="image" src="img/sb.png" name="search" value="search" height="35px">-->
+			</td>
+		
+			</tr>
+			
+			
+			</table>
+			
+                <!---タブ---------------->
+                <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+                    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                        <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">1F</a></li>
+                        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">2F</a></li>
+                        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">3F</a></li>
+                        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-4" aria-labelledby="ui-id-4" aria-selected="false"><a href="#tabs-4" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">s棟_1F</a></li>
+                    </ul>
+                    <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+                      
+						<canvas id="c1" width="100%" style="position: absolute; z-index: 2;"></canvas>
+                        <img src = "img/I_1_rs.png" width="100%" border = "0" style="position: relative; top: 0px; z-index: 1;" >
+                    </div>
+                    <div id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                        <canvas id="c2" width="100%" style="position: absolute; z-index: 2;"></canvas>
+                        <img src = "img/I_2_rs.png" width="100%" border = "0">
+                    </div>
+                     <div id="tabs-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                        <canvas id="c3" width="100%" style="position: absolute; z-index: 2;"></canvas>
+                        <img src = "img/I_3_rs.png" width="100%" border = "0">
+                        
+                    </div>
+                    <div id="tabs-4" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                        <canvas id="c4" width="100%" style="position: absolute; z-index: 2;"></canvas>
+                        <img src = "img/s_rs.png" width="100%" border = "0">
+                    </div>
+                   
+                </div>
+            
+            <br>
+            
+            
+            </div>
+        </div>
+    </body>
+</html>
