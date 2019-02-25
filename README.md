@@ -1,5 +1,5 @@
 # T-chan!
-##概要
+## 概要
 未来の在室情報を予測するシステム  
 http://inct.github.io/beIn/
 
@@ -9,11 +9,11 @@ http://inct.github.io/beIn/
 
 ### 開発環境
 ### 言語
-####Android
+#### Android
 Java
-####サーバー
+#### サーバー
 PHP
-####フロント
+#### フロント
 HTML
 CSS
 JavaScript
